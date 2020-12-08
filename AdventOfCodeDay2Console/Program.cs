@@ -2,11 +2,13 @@
 
 namespace AdventOfCodeDay2Console
 {
-    class Program
+    public class Program
     {
+        public static Database db = new Database();
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            db.ShowItemsInEveryList();
         }
     }
 }

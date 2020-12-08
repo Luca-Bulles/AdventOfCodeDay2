@@ -10,9 +10,6 @@ namespace AdventOfCodeDay2Console
     //Achter : is de input en moet gecontroleerd worden
     public class PasswordPolicy
     {
-        List<string> MinimalNumber = new List<string>();
-        List<string> MaximalNumber = new List<string>();
-        List<string> RequiredLetter = new List<string>();
-        List<string> Passwords = new List<string>();
+
     }
 }
