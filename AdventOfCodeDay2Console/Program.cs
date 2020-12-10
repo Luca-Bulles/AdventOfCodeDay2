@@ -11,7 +11,8 @@ namespace AdventOfCodeDay2Console
             Console.WriteLine("Hello World!");
             //database.ShowItemsInEveryList();
             //passwordPolicy.GetMinimalAmount();
-            passwordPolicy.PrintFirstIndexOfMinimalAmount();
+            //passwordPolicy.PrintFirstIndexOfMinimalAmount();
+            passwordPolicy.PasswordControlTestVersion();
         }
     }
 }
