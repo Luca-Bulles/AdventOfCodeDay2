@@ -14,14 +14,13 @@ namespace AdventOfCodeDay2Console
     {
         public static Database database = new Database();
         static int count = 0; //This value will be used as index for the lists
-        string passwords = database.Passwords[count];
+        int amountTimesUsed = 0;
         //methode die controleert of er voldaan wordt aan de minimale waarde
         //methode die controleert of er voldaan wordt aan de maximale waarde
         //methode die controleert of de letter wordt gebruikt.
 
         public void GetMinimalAmount()
         {
-            int firstValue = 0;
             List<string> minimalValue = database.MinimalAmount;
 
             foreach (string item in database.MinimalAmount)
@@ -41,12 +40,19 @@ namespace AdventOfCodeDay2Console
             if (database.Passwords[count].Contains(database.RequiredLetter[count]))
             {
                 Console.WriteLine("Password is correct");
+                //als usedLetterPasswordValue niet minder voorkomt dan de waarde van minimalPasswordValue gaat die naar de volgende if anders return false
+                foreach (var item in database.Passwords[count] = database.RequiredLetter[count])
+                {
+                    amountTimesUsed ++;
+                    Console.WriteLine(amountTimesUsed);
+                    //waarde is nog 1 en klopt nog niet
+                }
             }
             else
             {
                 Console.WriteLine("Password is incorrect");
             }
-            //als usedLetterPasswordValue niet minder voorkomt dan de waarde van minimalPasswordValue gaat die naar de volgende if anders return false
+
             //als usedLetterPasswordValue niet vaker voorkomt dan de waarde van maximalPasswordValue return true in de methode anders return false
         }
     }
