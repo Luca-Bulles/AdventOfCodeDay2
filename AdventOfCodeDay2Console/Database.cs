@@ -12,15 +12,15 @@ namespace AdventOfCodeDay2Console
         { 
             "2","3","4","5"
         };
-        List<string> MaximalAmount = new List<string>() 
+        public List<string> MaximalAmount = new List<string>() 
         {
             "4","6", "8", "10"
         };
-        List<string> RequiredLetter = new List<string>() 
+        public List<string> RequiredLetter = new List<string>() 
         {
             "a", "b", "c", "d"
         };
-        List<string> Passwords = new List<string>() 
+        public List<string> Passwords = new List<string>() 
         {
             "aaaaa", "ccc", "abcd", "ddddde"
         };

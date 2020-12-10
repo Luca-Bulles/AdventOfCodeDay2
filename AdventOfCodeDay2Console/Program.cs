@@ -4,11 +4,14 @@ namespace AdventOfCodeDay2Console
 {
     public class Program
     {
-        public static Database db = new Database();
+        public static Database database = new Database();
+        public static PasswordPolicy passwordPolicy = new PasswordPolicy();
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            db.ShowItemsInEveryList();
+            //database.ShowItemsInEveryList();
+            //passwordPolicy.GetMinimalAmount();
+            passwordPolicy.PrintFirstIndexOfMinimalAmount();
         }
     }
 }
