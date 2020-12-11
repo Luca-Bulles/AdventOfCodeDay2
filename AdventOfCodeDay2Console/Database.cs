@@ -8,21 +8,29 @@ namespace AdventOfCodeDay2Console
     {
         //in this class will the .txt file be read. tba
 
-       public List<string> MinimalAmount = new List<string>() 
-        { 
-            "2","3","4","5"
-        };
+        public List<string> MinimalAmount = new List<string>()
+         {
+             "2","3","4","5"
+         };
         public List<string> MaximalAmount = new List<string>() 
         {
             "4","6", "8", "10"
         };
-        public List<string> RequiredLetter = new List<string>() 
-        {
-            "a", "b", "c", "d"
-        };
         public List<string> Passwords = new List<string>() 
         {
             "aaaaa", "ccc", "abcd", "ddddde"
+        };
+        //array
+        public char[] CharRequiredLetter = { 'a', 'b', 'c', 'd' };
+
+        //int
+        public List<int> IntMinimalAmount = new List<int>()
+         {
+             2,3,4,5
+         };
+        public List<int> IntMaximalAmount = new List<int>()
+        {
+            4,6, 8, 10
         };
         public void ShowItemsInMinimalAmountList()
         {
@@ -34,8 +42,6 @@ namespace AdventOfCodeDay2Console
             MinimalAmount.ForEach(Console.WriteLine);
             Console.WriteLine("MaximalAmount:");
             MaximalAmount.ForEach(Console.WriteLine);
-            Console.WriteLine("RequiredLetter");
-            RequiredLetter.ForEach(Console.WriteLine);
             Console.WriteLine("Passwords");
             Passwords.ForEach(Console.WriteLine);
         }
