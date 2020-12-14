@@ -9,6 +9,7 @@ namespace AdventOfCodeDay2Console
         static void Main(string[] args)
         {
             passwordPolicy.PasswordControlTestVersion();
+            database.ReadTextFile();
         }
     }
 }

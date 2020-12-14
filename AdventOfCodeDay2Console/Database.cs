@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace AdventOfCodeDay2Console
@@ -35,6 +36,18 @@ namespace AdventOfCodeDay2Console
         public void ShowItemsInMinimalAmountList()
         {
             MinimalAmount.ForEach(Console.WriteLine);
+        }
+
+        public void ReadTextFile()
+        {
+            StreamReader sr = new StreamReader("../../../Database.txt");
+            string data = sr.ReadLine();
+            while (data != null)
+            {
+                Console.WriteLine(data);
+                data = sr.ReadLine();
+                //string[] values = data.Split(",");
+            }
         }
     }
 }
