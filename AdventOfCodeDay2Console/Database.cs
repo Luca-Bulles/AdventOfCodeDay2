@@ -18,7 +18,7 @@ namespace AdventOfCodeDay2Console
         };
         public List<string> Passwords = new List<string>() 
         {
-            "aaaaa", "ccc", "abcd", "ddddde"
+            "aaaa", "ccc", "abcd", "ddddde"
         };
         //array
         public char[] CharRequiredLetter = { 'a', 'b', 'c', 'd' };

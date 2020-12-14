@@ -35,38 +35,44 @@ namespace AdventOfCodeDay2Console
         }
         public void PasswordControlTestVersion()
         {
-            Database db = new Database(); 
-            //als usedLetterPasswordValue te vinden is naar de volgende if anders return password is incorrect
-            Console.WriteLine("aaaaa -> " + db.Passwords[count]);
+            Database db = new Database();
+            //als usedLetterPasswordValue te vinden is naar de volgende of anders return password is incorrect
+            Console.WriteLine("aaaa -> " + db.Passwords[count]);
             if (db.Passwords[count].Contains(db.CharRequiredLetter[count]))
             {
-                Console.WriteLine("Password is correct");
                 //als usedLetterPasswordValue niet minder voorkomt dan de waarde van minimalPasswordValue gaat die naar de volgende if anders return false
                 foreach (char item in db.Passwords[count].ToCharArray())
                 {
-                    if(item == db.CharRequiredLetter[count])
+                    if (item == db.CharRequiredLetter[count])
                     {
                         amountTimesUsed++;
-                        if (amountTimesUsed > database.IntMaximalAmount[count])
-                        {
-                            Console.WriteLine("Value is bigger than MaximalAmount");
-                        }
-                        if (amountTimesUsed < database.IntMaximalAmount[count])
-                        {
-                            Console.WriteLine("Value is smaller than MaximalAmount");
-                        }
-                        if (amountTimesUsed == database.IntMaximalAmount[count])
-                        {
-                            Console.WriteLine("Value is equal to MaximalAmount");
-                        }
                     }
                     Console.WriteLine(amountTimesUsed);
-
                 }
+                if (amountTimesUsed >= database.IntMinimalAmount[count])
+                {
+                    Console.WriteLine("Value is bigger or equal to MinimalAmount");
+                    if (amountTimesUsed <= database.IntMaximalAmount[count])
+                    {
+                        Console.WriteLine("Value is smaller or equal to MaximalAmount");
+                        Console.WriteLine("Password is correct");
+                    }
+                    if (amountTimesUsed > database.IntMaximalAmount[count])
+                    {
+                        Console.WriteLine("Value is bigger than MaximalAmount");
+                        Console.WriteLine("Password is incorrect");
+                    }
+                }
+                if (amountTimesUsed < database.IntMinimalAmount[count])
+                {
+                    Console.WriteLine("Value is lower than MinimalAmount");
+                    Console.WriteLine("Password is incorrect");
+                }
+
             }
             else
             {
-                Console.WriteLine("Password is incorrect");
+                Console.WriteLine("Password is incorrect because the letter requirement isn't reached");
             }
 
             //als usedLetterPasswordValue niet vaker voorkomt dan de waarde van maximalPasswordValue return true in de methode anders return false
