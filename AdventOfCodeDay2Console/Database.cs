@@ -36,14 +36,5 @@ namespace AdventOfCodeDay2Console
         {
             MinimalAmount.ForEach(Console.WriteLine);
         }
-        public void ShowItemsInEveryList()
-        {
-            Console.WriteLine("MinimalAmount:");
-            MinimalAmount.ForEach(Console.WriteLine);
-            Console.WriteLine("MaximalAmount:");
-            MaximalAmount.ForEach(Console.WriteLine);
-            Console.WriteLine("Passwords");
-            Passwords.ForEach(Console.WriteLine);
-        }
     }
 }
