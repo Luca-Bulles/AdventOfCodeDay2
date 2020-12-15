@@ -8,8 +8,8 @@ namespace AdventOfCodeDay2Console
         public static PasswordPolicy passwordPolicy = new PasswordPolicy();
         static void Main(string[] args)
         {
-            passwordPolicy.PasswordControlTestVersion();
-            database.ReadTextFile();
+            //passwordPolicy.PasswordControlTestVersion();
+            database.ReadTextFileV2();
         }
     }
 }
