@@ -40,10 +40,8 @@ namespace AdventOfCodeDay2Console
         //textfile list input
         public List<int> TextFileMinimalNumber = new List<int>();
         public List<int> TextFileMaximalNumber = new List<int>();
-        public List<string> TextFileRequiredLetter = new List<string>();
+        public List<char> TextFileRequiredLetter = new List<char>();
         public List<string> TextFilePassword = new List<string>();
-        //temp fix 
-        int CountAmountRows = 0;
         public void ReadTextFile()
         {
             StreamReader sr = new StreamReader("../../../Database.txt");
@@ -54,7 +52,7 @@ namespace AdventOfCodeDay2Console
                 string[] myText = data.Split(myChars);
                 int MinimalNumber = Int32.Parse(myText[0]);
                 int MaximalNumber = Int32.Parse(myText[1]);
-                string RequiredLetter = myText[2];
+                char RequiredLetter = char.Parse(myText[2]);
                 string Password = myText[4];
                 //Consol.Writeline is used to test the method
                 //Console.WriteLine(Password);
@@ -64,7 +62,7 @@ namespace AdventOfCodeDay2Console
                 //TextFileMinimalNumber.ForEach(Console.WriteLine);
             }
         }
-        public void AddItemsToLists(int MinimalNumber, int MaximalNumber, string RequiredLetter, string Password)
+        public void AddItemsToLists(int MinimalNumber, int MaximalNumber, char RequiredLetter, string Password)
         {
             TextFileMinimalNumber.Add(MinimalNumber);
             TextFileMaximalNumber.Add(MaximalNumber);

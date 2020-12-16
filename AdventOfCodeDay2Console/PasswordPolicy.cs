@@ -36,63 +36,57 @@ namespace AdventOfCodeDay2Console
         public void PasswordControl()
         {
             int AmountCorrectPasswords = 0;
-            int IndexNumber = 0;
-            int LetterCountInPassword = 0;
+
             database.ReadTextFile();
-            int TotalChecks = 0;
-            while(TotalChecks < 1000)
+            for(int i = 0; i < database.TextFileRequiredLetter.Count; i++)
             {
-                if (database.TextFilePassword[IndexNumber].Contains(database.TextFilePassword[IndexNumber]))
+                if (database.TextFilePassword[i].Contains(database.TextFileRequiredLetter[i]))
                 {
-                    foreach (string item in database.TextFilePassword)
+                    int LetterCountInPassword = 0;
+                    foreach (char item in database.TextFilePassword[i])
                     {
-                        if (item == database.TextFileRequiredLetter[IndexNumber])
+                        if (item == database.TextFileRequiredLetter[i])
                         {
                             LetterCountInPassword++;
                         }
                         //Check if lettercountInPassword is changed
                         Console.WriteLine("LetterCountInPassword first ConsoleWriteline: " + LetterCountInPassword);
                     }
-                    if (LetterCountInPassword >= database.TextFileMinimalNumber[IndexNumber])
+                    if (LetterCountInPassword >= database.TextFileMinimalNumber[i])
                     {
                         Console.WriteLine("Value is bigger or equal to MinimalNumber");
-                        if (LetterCountInPassword <= database.TextFileMaximalNumber[IndexNumber])
+                        if (LetterCountInPassword <= database.TextFileMaximalNumber[i])
                         {
                             Console.WriteLine("Value is smaller or equal to MaximalNumber");
                             Console.WriteLine("Password is correct");
-                            IndexNumber++;
                             AmountCorrectPasswords++;
-                            TotalChecks++;
                             //Test to check if IndexNumber and AmountCorrectPasswords is higher
-                            Console.WriteLine("IndexNumber: " + IndexNumber);
+                            Console.WriteLine("IndexNumber: " + i);
                             Console.WriteLine("AmountCorrectPasswords: " + AmountCorrectPasswords);
+                            continue;
                         }
-                        if (LetterCountInPassword > database.TextFileMaximalNumber[IndexNumber])
+                        if (LetterCountInPassword > database.TextFileMaximalNumber[i])
                         {
                             Console.WriteLine("Value is bigger than MaximalNumber");
                             Console.WriteLine("Password is incorrect");
-                            IndexNumber++;
-                            TotalChecks++;
+                            continue;
+
                         }
                     }
-                    if (LetterCountInPassword < database.TextFileMinimalNumber[IndexNumber])
+                    if (LetterCountInPassword < database.TextFileMinimalNumber[i])
                     {
                         Console.WriteLine("Value is lower than MinimalNumber");
                         Console.WriteLine("Password is incorrect");
-                        IndexNumber++;
-                        TotalChecks++;
+
                     }
                 }
                 else
                 {
                     Console.WriteLine("Password is incorrect because the letter requirement isn't reached");
-                    IndexNumber++;
-                    TotalChecks++;
                 }
 
-                Console.WriteLine(AmountCorrectPasswords);
             }
-            
+            Console.WriteLine("AmountCorrectPasswords: " + AmountCorrectPasswords);
         }
         public void PasswordControlTestVersion()
         {
