@@ -44,33 +44,15 @@ namespace AdventOfCodeDay2Console
             string data = sr.ReadLine();
             while (data != null)
             {
-                //Console.WriteLine(data);
-                string[] values = data.Split("-" + " " + ": ");
-                string MinimalNumber = values[0];
-                string MaximalNumber = values[1];
-                //int MinimalNumber = Int32.Parse(values[0]);
-                //int MaximalNumber = Int32.Parse(values[1]);
-                //string StringMinimalNumber = MinimalNumber.ToString();
-                //string StringMaximalNumber = MaximalNumber.ToString();
-                //char RequiredLetter = char.Parse(values[2]);
-                //char PasswordTextFile = char.Parse(values[3]);
-                Console.WriteLine(MinimalNumber, MaximalNumber);
-                data = sr.ReadLine();
-            }
-        }
-        public void ReadTextFileV2()
-        {
-            StreamReader sr = new StreamReader("../../../Database.txt");
-            string data = sr.ReadLine();
-            while (data != null)
-            {
-                Char[] myChars = { '-', ' ', ':'  };
+                Char[] myChars = { '-', ' ', ':' };
                 string[] myText = data.Split(myChars);
-                foreach (string x in myText)
-                {
-                    data = sr.ReadLine();
-                    Console.WriteLine(x);
-                }
+                int MinimalNumber = Int32.Parse(myText[0]);
+                int MaximalNumber = Int32.Parse(myText[1]);
+                char RequiredLetter = char.Parse(myText[2]);
+                string Password = myText[4];
+                //Consol.Writeline is used to test the method
+                Console.WriteLine(Password);
+                data = sr.ReadLine();
             }
         }
     }
