@@ -12,7 +12,7 @@ namespace AdventOfCodeDay2Console
     //regex seperator an to list + streamreader
     public class PasswordPolicy
     {
-        public static Database database = new Database();
+        public Database database = new Database();
         static int count = 0; //This value will be used as index for the lists
         int amountTimesUsed = 0;
         //methode die controleert of er voldaan wordt aan de minimale waarde
@@ -32,6 +32,67 @@ namespace AdventOfCodeDay2Console
         {
             List<string> minimalValue = database.MinimalAmount;
             Console.WriteLine(database.MinimalAmount[0][0]);
+        }
+        public void PasswordControl()
+        {
+            int AmountCorrectPasswords = 0;
+            int IndexNumber = 0;
+            int LetterCountInPassword = 0;
+            database.ReadTextFile();
+            int TotalChecks = 0;
+            while(TotalChecks < 1000)
+            {
+                if (database.TextFilePassword[IndexNumber].Contains(database.TextFilePassword[IndexNumber]))
+                {
+                    foreach (string item in database.TextFilePassword)
+                    {
+                        if (item == database.TextFileRequiredLetter[IndexNumber])
+                        {
+                            LetterCountInPassword++;
+                        }
+                        //Check if lettercountInPassword is changed
+                        Console.WriteLine("LetterCountInPassword first ConsoleWriteline: " + LetterCountInPassword);
+                    }
+                    if (LetterCountInPassword >= database.TextFileMinimalNumber[IndexNumber])
+                    {
+                        Console.WriteLine("Value is bigger or equal to MinimalNumber");
+                        if (LetterCountInPassword <= database.TextFileMaximalNumber[IndexNumber])
+                        {
+                            Console.WriteLine("Value is smaller or equal to MaximalNumber");
+                            Console.WriteLine("Password is correct");
+                            IndexNumber++;
+                            AmountCorrectPasswords++;
+                            TotalChecks++;
+                            //Test to check if IndexNumber and AmountCorrectPasswords is higher
+                            Console.WriteLine("IndexNumber: " + IndexNumber);
+                            Console.WriteLine("AmountCorrectPasswords: " + AmountCorrectPasswords);
+                        }
+                        if (LetterCountInPassword > database.TextFileMaximalNumber[IndexNumber])
+                        {
+                            Console.WriteLine("Value is bigger than MaximalNumber");
+                            Console.WriteLine("Password is incorrect");
+                            IndexNumber++;
+                            TotalChecks++;
+                        }
+                    }
+                    if (LetterCountInPassword < database.TextFileMinimalNumber[IndexNumber])
+                    {
+                        Console.WriteLine("Value is lower than MinimalNumber");
+                        Console.WriteLine("Password is incorrect");
+                        IndexNumber++;
+                        TotalChecks++;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Password is incorrect because the letter requirement isn't reached");
+                    IndexNumber++;
+                    TotalChecks++;
+                }
+
+                Console.WriteLine(AmountCorrectPasswords);
+            }
+            
         }
         public void PasswordControlTestVersion()
         {
