@@ -68,6 +68,7 @@ namespace AdventOfCodeDay2Console
                 string[] myText = data.Split(myChars);
                 foreach (string x in myText)
                 {
+                    data = sr.ReadLine();
                     Console.WriteLine(x);
                 }
             }
