@@ -62,7 +62,7 @@ namespace AdventOfCodeDay2Console
                 }
 
             }
-            Console.WriteLine("AmountCorrectPasswords: " + AmountCorrectPasswords);
+            Console.WriteLine("AmountCorrectPasswords (Part one): " + AmountCorrectPasswords);
         }
 
         public void PasswordControlPartTwo()
@@ -73,7 +73,6 @@ namespace AdventOfCodeDay2Console
             //if bot places aren't used by the required letter it's false
             int AmountCorrectPasswords = 0;
             database.ReadTextFile();
-            Console.WriteLine(database.TextFilePassword[0][2]);
             for (int i = 0; i < database.TextFileRequiredLetter.Count; i++) 
             {
                 //Company doesn't count from 0 with indexes
@@ -108,7 +107,7 @@ namespace AdventOfCodeDay2Console
                     }
                 }
             }
-            Console.WriteLine("AmountCorrectPasswords: " + AmountCorrectPasswords);
+            Console.WriteLine("AmountCorrectPasswords (Part two): " + AmountCorrectPasswords);
         }
     }
 }
