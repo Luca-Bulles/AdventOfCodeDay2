@@ -2,11 +2,14 @@
 
 namespace AdventOfCodeDay2Console
 {
-    class Program
+    public class Program
     {
+        public static Database database = new Database();
+        public static PasswordPolicy passwordPolicy = new PasswordPolicy();
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //database.ReadTextFile();
+            passwordPolicy.PasswordControl();
         }
     }
 }

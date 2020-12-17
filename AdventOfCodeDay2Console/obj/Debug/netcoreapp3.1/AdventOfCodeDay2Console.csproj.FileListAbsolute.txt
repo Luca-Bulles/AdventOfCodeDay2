@@ -1,0 +1,13 @@
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\obj\Debug\netcoreapp3.1\AdventOfCodeDay2Console.csprojAssemblyReference.cache
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\obj\Debug\netcoreapp3.1\AdventOfCodeDay2Console.AssemblyInfoInputs.cache
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\obj\Debug\netcoreapp3.1\AdventOfCodeDay2Console.AssemblyInfo.cs
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\obj\Debug\netcoreapp3.1\AdventOfCodeDay2Console.csproj.CoreCompileInputs.cache
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\bin\Debug\netcoreapp3.1\AdventOfCodeDay2Console.exe
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\bin\Debug\netcoreapp3.1\AdventOfCodeDay2Console.deps.json
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\bin\Debug\netcoreapp3.1\AdventOfCodeDay2Console.runtimeconfig.json
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\bin\Debug\netcoreapp3.1\AdventOfCodeDay2Console.runtimeconfig.dev.json
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\bin\Debug\netcoreapp3.1\AdventOfCodeDay2Console.dll
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\bin\Debug\netcoreapp3.1\AdventOfCodeDay2Console.pdb
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\obj\Debug\netcoreapp3.1\AdventOfCodeDay2Console.dll
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\obj\Debug\netcoreapp3.1\AdventOfCodeDay2Console.pdb
+C:\Users\luca_\source\repos\AdventOfCodeDay2Console\AdventOfCodeDay2Console\obj\Debug\netcoreapp3.1\AdventOfCodeDay2Console.genruntimeconfig.cache
