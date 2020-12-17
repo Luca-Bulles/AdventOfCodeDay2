@@ -50,7 +50,7 @@ namespace AdventOfCodeDay2Console
                             LetterCountInPassword++;
                         }
                         //Check if lettercountInPassword is changed
-                        Console.WriteLine("LetterCountInPassword first ConsoleWriteline: " + LetterCountInPassword);
+                        Console.WriteLine("LetterCountInPassword: " + LetterCountInPassword);
                     }
                     if (LetterCountInPassword >= database.TextFileMinimalNumber[i])
                     {
