@@ -8,8 +8,6 @@ namespace AdventOfCodeDay2Console
     public class PasswordPolicy
     {
         public Database database = new Database();
-        static int count = 0; 
-        int amountTimesUsed = 0;
 
         public void PasswordControl()
         {
@@ -65,6 +63,16 @@ namespace AdventOfCodeDay2Console
 
             }
             Console.WriteLine("AmountCorrectPasswords: " + AmountCorrectPasswords);
+        }
+
+        public void PasswordControlPartTwo()
+        {
+            //TextFileMinimalNumber = required index place 
+            //TextFileMaximalNumber = required index place
+            //if both places are used by the required letter it's false
+            //if bot places aren't used by the required letter it's false
+            database.ReadTextFile();
+            Console.WriteLine(database.TextFilePassword[0][2]);
         }
     }
 }
