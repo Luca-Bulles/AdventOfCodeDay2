@@ -38,14 +38,7 @@ namespace AdventOfCodeDay2Console
                             continue;
                         }
                     }
-                    //if (LetterCountInPassword < database.TextFileMinimalNumber[i])
-                    //{
-                    //}
                 }
-                //else
-                //{
-                //}
-
             }
             Console.WriteLine("AmountCorrectPasswords (Part one): " + AmountCorrectPasswords);
         }
