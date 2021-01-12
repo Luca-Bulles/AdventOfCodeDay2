@@ -9,7 +9,7 @@ namespace AdventOfCodeDay2Console
     {
         public Database database = new Database();
 
-        public void PasswordControl()
+        public int PasswordControl()
         {
             int AmountCorrectPasswords = 0;
 
@@ -40,10 +40,10 @@ namespace AdventOfCodeDay2Console
                     }
                 }
             }
-            Console.WriteLine("AmountCorrectPasswords (Part one): " + AmountCorrectPasswords);
+            return AmountCorrectPasswords;
         }
 
-        public void PasswordControlPartTwo()
+        public int PasswordControlPartTwo()
         {
             int AmountCorrectPasswords = 0;
             database.ReadTextFile();
@@ -76,7 +76,7 @@ namespace AdventOfCodeDay2Console
                     }
                 }
             }
-            Console.WriteLine("AmountCorrectPasswords (Part two): " + AmountCorrectPasswords);
+            return AmountCorrectPasswords;
         }
     }
 }

@@ -8,8 +8,8 @@ namespace AdventOfCodeDay2Console
         public static PasswordPolicy passwordPolicy = new PasswordPolicy();
         static void Main(string[] args)
         {
-            passwordPolicy.PasswordControl();
-            passwordPolicy.PasswordControlPartTwo();
+            Console.WriteLine("Amount of correct passwords (part one): " + passwordPolicy.PasswordControl());
+            Console.WriteLine("Amount of correct passwords (part two): " + passwordPolicy.PasswordControlPartTwo() / 2);
         }
     }
 }
