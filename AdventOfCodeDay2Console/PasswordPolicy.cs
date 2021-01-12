@@ -8,8 +8,6 @@ namespace AdventOfCodeDay2Console
     public class PasswordPolicy
     {
         public Database database = new Database();
-        static int count = 0; 
-        int amountTimesUsed = 0;
 
         public void PasswordControl()
         {
@@ -64,7 +62,52 @@ namespace AdventOfCodeDay2Console
                 }
 
             }
-            Console.WriteLine("AmountCorrectPasswords: " + AmountCorrectPasswords);
+            Console.WriteLine("AmountCorrectPasswords (Part one): " + AmountCorrectPasswords);
+        }
+
+        public void PasswordControlPartTwo()
+        {
+            //TextFileMinimalNumber = required index place 
+            //TextFileMaximalNumber = required index place
+            //if both places are used by the required letter it's false
+            //if bot places aren't used by the required letter it's false
+            int AmountCorrectPasswords = 0;
+            database.ReadTextFile();
+            for (int i = 0; i < database.TextFileRequiredLetter.Count; i++) 
+            {
+                //Company doesn't count from 0 with indexes
+                int Index1 = database.TextFileMinimalNumber[i] - 1;
+                int Index2 = database.TextFileMaximalNumber[i] - 1;
+                if (database.TextFileRequiredLetter[i] == database.TextFilePassword[i][Index1])
+                {
+                    if(database.TextFileRequiredLetter[i] == database.TextFilePassword[i][Index2]) 
+                    {
+                        Console.WriteLine("Password is incorrect, required letter is used on both places");
+                        continue;
+                    }
+                    if (database.TextFileRequiredLetter[i] != database.TextFilePassword[i][Index2]) 
+                    {
+                        Console.WriteLine("Password is correct, required letter is used on first place");
+                        AmountCorrectPasswords++;
+                        continue;
+                    }
+                }
+                else if (database.TextFileRequiredLetter[i] == database.TextFilePassword[i][Index2]) 
+                {
+                    if (database.TextFileRequiredLetter[i] == database.TextFilePassword[i][Index1])
+                    {
+                        Console.WriteLine("Password is incorrect, required letter is used on both places");
+                        continue;
+                    }
+                    if (database.TextFileRequiredLetter[i] != database.TextFilePassword[i][Index1]) 
+                    {
+                        Console.WriteLine("Password is correct, required letter is used on seccond place.");
+                        AmountCorrectPasswords++;
+                        continue;
+                    }
+                }
+            }
+            Console.WriteLine("AmountCorrectPasswords (Part two): " + AmountCorrectPasswords);
         }
     }
 }
