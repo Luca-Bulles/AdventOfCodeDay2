@@ -7,13 +7,11 @@ namespace AdventOfCodeDay2Console
 {
     public class Database
     {
-        //in this class will the .txt file be read. 
-
-        //textfile list input
         public List<int> TextFileMinimalNumber = new List<int>();
         public List<int> TextFileMaximalNumber = new List<int>();
         public List<char> TextFileRequiredLetter = new List<char>();
         public List<string> TextFilePassword = new List<string>();
+
         public void ReadTextFile()
         {
             StreamReader sr = new StreamReader("../../../Database.txt");
