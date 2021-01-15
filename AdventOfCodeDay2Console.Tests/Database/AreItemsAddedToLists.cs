@@ -15,7 +15,7 @@ namespace AdventOfCodeDay2Console.Tests
             Database database = new Database();
 
             //act
-            database.ReadTextFile();
+            database.ReadTextFileAndDivideDataOverLists();
 
             //assert
             Assert.IsNotNull(database.TextFileMinimalNumber);
@@ -28,7 +28,7 @@ namespace AdventOfCodeDay2Console.Tests
             Database database = new Database();
 
             //act
-            database.ReadTextFile();
+            database.ReadTextFileAndDivideDataOverLists();
 
             //assert
             Assert.IsNotNull(database.TextFileMaximalNumber);
@@ -42,7 +42,7 @@ namespace AdventOfCodeDay2Console.Tests
             List<char> TextFileRequiredLetterTest = new List<char>("l");
 
             //act
-            database.ReadTextFile();
+            database.ReadTextFileAndDivideDataOverLists();
 
             //assert
             Assert.IsNotNull(database.TextFileRequiredLetter);
@@ -55,7 +55,7 @@ namespace AdventOfCodeDay2Console.Tests
             Database database = new Database();
 
             //act
-            database.ReadTextFile();
+            database.ReadTextFileAndDivideDataOverLists();
 
             //assert
             Assert.IsNotNull(database.TextFilePassword);

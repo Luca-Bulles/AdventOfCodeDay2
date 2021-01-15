@@ -12,7 +12,7 @@ namespace AdventOfCodeDay2Console
         public List<char> TextFileRequiredLetter = new List<char>();
         public List<string> TextFilePassword = new List<string>();
 
-        public void ReadTextFile()
+        public void ReadTextFileAndDivideDataOverLists()
         {
             StreamReader sr = new StreamReader("../../../Database.txt");
             string data = sr.ReadLine();

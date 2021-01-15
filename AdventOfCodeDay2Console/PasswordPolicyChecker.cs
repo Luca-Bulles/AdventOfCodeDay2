@@ -5,7 +5,7 @@ using System.Text;
 namespace AdventOfCodeDay2Console
 {
 
-    public class PasswordPolicy
+    public class PasswordPolicyChecker
     {
         public Database database = new Database();
 
@@ -13,7 +13,7 @@ namespace AdventOfCodeDay2Console
         {
             int AmountCorrectPasswords = 0;
 
-            database.ReadTextFile();
+            database.ReadTextFileAndDivideDataOverLists();
             for(int i = 0; i < database.TextFileRequiredLetter.Count; i++)
             {
                 if (database.TextFilePassword[i].Contains(database.TextFileRequiredLetter[i]))
@@ -46,7 +46,7 @@ namespace AdventOfCodeDay2Console
         public int PasswordControlPartTwo()
         {
             int AmountCorrectPasswords = 0;
-            database.ReadTextFile();
+            database.ReadTextFileAndDivideDataOverLists();
             for (int i = 0; i < database.TextFileRequiredLetter.Count; i++) 
             {
                 int Index1 = database.TextFileMinimalNumber[i] - 1;
