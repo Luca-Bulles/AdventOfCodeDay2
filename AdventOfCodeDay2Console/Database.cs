@@ -7,10 +7,10 @@ namespace AdventOfCodeDay2Console
 {
     public class Database
     {
-        public List<int> TextFileMinimalNumber = new List<int>();
-        public List<int> TextFileMaximalNumber = new List<int>();
-        public List<char> TextFileRequiredLetter = new List<char>();
-        public List<string> TextFilePassword = new List<string>();
+        //public List<int> TextFileMinimalNumber = new List<int>();
+        //public List<int> TextFileMaximalNumber = new List<int>();
+        //public List<char> TextFileRequiredLetter = new List<char>();
+        //public List<string> TextFilePassword = new List<string>();
 
         public void ReadTextFile()
         {
@@ -25,15 +25,17 @@ namespace AdventOfCodeDay2Console
                 char RequiredLetter = char.Parse(myText[2]);
                 string Password = myText[4];
                 data = sr.ReadLine();
-                AddItemsToLists(MinimalNumber, MaximalNumber, RequiredLetter, Password);
+                //AddItemsToLists(MinimalNumber, MaximalNumber, RequiredLetter, Password);
+                AddDataToLists addDataToLists = new AddDataToLists();
+                addDataToLists.DivideDataIntoLists(MinimalNumber, MaximalNumber, RequiredLetter, Password);
             }
         }
-        public void AddItemsToLists(int MinimalNumber, int MaximalNumber, char RequiredLetter, string Password)
-        {
-            TextFileMinimalNumber.Add(MinimalNumber);
-            TextFileMaximalNumber.Add(MaximalNumber);
-            TextFileRequiredLetter.Add(RequiredLetter);
-            TextFilePassword.Add(Password);
-        }
+        //public void AddItemsToLists(int MinimalNumber, int MaximalNumber, char RequiredLetter, string Password)
+        //{
+        //    TextFileMinimalNumber.Add(MinimalNumber);
+        //    TextFileMaximalNumber.Add(MaximalNumber);
+        //    TextFileRequiredLetter.Add(RequiredLetter);
+        //    TextFilePassword.Add(Password);
+        //}
     }
 }

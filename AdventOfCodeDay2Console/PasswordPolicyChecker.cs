@@ -8,32 +8,33 @@ namespace AdventOfCodeDay2Console
     public class PasswordPolicyChecker
     {
         public Database database = new Database();
+        public AddDataToLists data = new AddDataToLists();
 
         public int PasswordControl()
         {
             int AmountCorrectPasswords = 0;
 
             database.ReadTextFile();
-            for(int i = 0; i < database.TextFileRequiredLetter.Count; i++)
+            for(int i = 0; i <data.MinimalNumberRequirement.Count; i++)
             {
-                if (database.TextFilePassword[i].Contains(database.TextFileRequiredLetter[i]))
+                if (data.PasswordByUserInput[i].Contains(data.RequiredLetterRequirement[i]))
                 {
                     int LetterCountInPassword = 0;
-                    foreach (char item in database.TextFilePassword[i])
+                    foreach (char item in data.PasswordByUserInput[i])
                     {
-                        if (item == database.TextFileRequiredLetter[i])
+                        if (item == data.RequiredLetterRequirement[i])
                         {
                             LetterCountInPassword++;
                         }
                     }
-                    if (LetterCountInPassword >= database.TextFileMinimalNumber[i])
+                    if (LetterCountInPassword >= data.MinimalNumberRequirement[i])
                     {
-                        if (LetterCountInPassword <= database.TextFileMaximalNumber[i])
+                        if (LetterCountInPassword <= data.MaximalNumberRequirement[i])
                         {
                             AmountCorrectPasswords++;
                             continue;
                         }
-                        if (LetterCountInPassword > database.TextFileMaximalNumber[i])
+                        if (LetterCountInPassword > data.MaximalNumberRequirement[i])
                         {
                             continue;
                         }
@@ -47,29 +48,29 @@ namespace AdventOfCodeDay2Console
         {
             int AmountCorrectPasswords = 0;
             database.ReadTextFile();
-            for (int i = 0; i < database.TextFileRequiredLetter.Count; i++) 
+            for (int i = 0; i < data.RequiredLetterRequirement.Count; i++) 
             {
-                int Index1 = database.TextFileMinimalNumber[i] - 1;
-                int Index2 = database.TextFileMaximalNumber[i] - 1;
-                if (database.TextFileRequiredLetter[i] == database.TextFilePassword[i][Index1])
+                int Index1 = data.MinimalNumberRequirement[i] - 1;
+                int Index2 = data.MaximalNumberRequirement[i] - 1;
+                if (data.RequiredLetterRequirement[i] == data.PasswordByUserInput[i][Index1])
                 {
-                    if(database.TextFileRequiredLetter[i] == database.TextFilePassword[i][Index2]) 
+                    if(data.RequiredLetterRequirement[i] == data.PasswordByUserInput[i][Index2]) 
                     {
                         continue;
                     }
-                    if (database.TextFileRequiredLetter[i] != database.TextFilePassword[i][Index2]) 
+                    if (data.RequiredLetterRequirement[i] != data.PasswordByUserInput[i][Index2]) 
                     {
                         AmountCorrectPasswords++;
                         continue;
                     }
                 }
-                else if (database.TextFileRequiredLetter[i] == database.TextFilePassword[i][Index2]) 
+                else if (data.RequiredLetterRequirement[i] == data.PasswordByUserInput[i][Index2]) 
                 {
-                    if (database.TextFileRequiredLetter[i] == database.TextFilePassword[i][Index1])
+                    if (data.RequiredLetterRequirement[i] == data.PasswordByUserInput[i][Index1])
                     {
                         continue;
                     }
-                    if (database.TextFileRequiredLetter[i] != database.TextFilePassword[i][Index1]) 
+                    if (data.RequiredLetterRequirement[i] != data.PasswordByUserInput[i][Index1]) 
                     {
                         AmountCorrectPasswords++;
                         continue;
