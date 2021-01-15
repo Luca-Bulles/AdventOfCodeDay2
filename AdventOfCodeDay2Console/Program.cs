@@ -4,7 +4,6 @@ namespace AdventOfCodeDay2Console
 {
     public class Program
     {
-        public static Database database = new Database();
         public static PasswordPolicyChecker passwordPolicy = new PasswordPolicyChecker();
         static void Main(string[] args)
         {

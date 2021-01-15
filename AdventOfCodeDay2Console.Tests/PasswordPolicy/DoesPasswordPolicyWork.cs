@@ -9,7 +9,7 @@ namespace AdventOfCodeDay2Console.Tests
     public class DoesPasswordPolicyWork
     {
         [TestMethod]
-        public void DoesPasswordPolicyPartOneWork()
+        public void Does_PasswordPolicy_PartOne_Work()
         {
             //arrange
             PasswordPolicyChecker passwordPolicy = new PasswordPolicyChecker();
@@ -20,7 +20,7 @@ namespace AdventOfCodeDay2Console.Tests
         }
 
         [TestMethod]
-        public void DoesPasswordPolicyPartTwoWork()
+        public void Does_PasswordPolicy_PartTwo_Work()
         {
             //arrange
             PasswordPolicyChecker passwordPolicy = new PasswordPolicyChecker();

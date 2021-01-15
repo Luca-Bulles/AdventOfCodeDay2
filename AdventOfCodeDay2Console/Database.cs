@@ -12,7 +12,7 @@ namespace AdventOfCodeDay2Console
         public List<char> TextFileRequiredLetter = new List<char>();
         public List<string> TextFilePassword = new List<string>();
 
-        public void ReadTextFileAndDivideDataOverLists()
+        public void ReadText_File_And_Divide_Data_Over_Lists()
         {
             StreamReader sr = new StreamReader("../../../Database.txt");
             string data = sr.ReadLine();
@@ -25,10 +25,10 @@ namespace AdventOfCodeDay2Console
                 char RequiredLetter = char.Parse(myText[2]);
                 string Password = myText[4];
                 data = sr.ReadLine();
-                AddItemsToLists(MinimalNumber, MaximalNumber, RequiredLetter, Password);
+                Add_Items_To_Lists(MinimalNumber, MaximalNumber, RequiredLetter, Password);
             }
         }
-        public void AddItemsToLists(int MinimalNumber, int MaximalNumber, char RequiredLetter, string Password)
+        public void Add_Items_To_Lists(int MinimalNumber, int MaximalNumber, char RequiredLetter, string Password)
         {
             TextFileMinimalNumber.Add(MinimalNumber);
             TextFileMaximalNumber.Add(MaximalNumber);
