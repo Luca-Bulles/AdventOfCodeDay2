@@ -11,7 +11,7 @@ namespace AdventOfCodeDay2Console.Tests
         [TestMethod]
         public void DoesPasswordPolicyPartOneWork()
         {
-            PasswordPolicy passwordPolicy = new PasswordPolicy();
+            PasswordPolicyChecker passwordPolicy = new PasswordPolicyChecker();
             int correctPasswords = passwordPolicy.PasswordControl();
             Assert.AreEqual(447, correctPasswords);
         }
@@ -19,7 +19,7 @@ namespace AdventOfCodeDay2Console.Tests
         [TestMethod]
         public void DoesPasswordPolicyPartTwoWork()
         {
-            PasswordPolicy passwordPolicy = new PasswordPolicy();
+            PasswordPolicyChecker passwordPolicy = new PasswordPolicyChecker();
             int correctPasswords = passwordPolicy.PasswordControlPartTwo();
             Assert.AreEqual(249, correctPasswords);
         }

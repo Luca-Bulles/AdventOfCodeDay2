@@ -5,7 +5,7 @@ using System.Text;
 namespace AdventOfCodeDay2Console
 {
 
-    public class PasswordPolicy
+    public class PasswordPolicyChecker
     {
         public Database database = new Database();
 

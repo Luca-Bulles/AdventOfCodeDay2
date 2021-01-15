@@ -8,11 +8,25 @@ namespace AdventOfCodeDay2Console.Tests
     [TestClass]
     public class AreItemsAddedToLists
     {
+        //[TestMethod]
+        //public void Parses_password_policy_correctly()
+        //{
+        //    var passwordString = "1-3 a: abcde";
+        //    var passwordParser = new PasswordParser();
+
+        //    var result = passwordParser.Parse(passwordString);
+
+        //    Assert.Equals(1, result.MinimalNumber);
+        //    // etc.
+        //}
+
         [TestMethod]
         public void MinimalNumberValuesAreAddedToList()
         {
             Database database = new Database();
+
             database.ReadTextFile();
+
             Assert.IsNotNull(database.TextFileMinimalNumber);
             Assert.AreEqual(3, database.TextFileMinimalNumber[0]);
         }
